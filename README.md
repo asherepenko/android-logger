@@ -3,7 +3,7 @@
 [![](https://jitci.com/gh/asherepenko/android-logger/svg)](https://jitci.com/gh/asherepenko/android-logger)
 [![](https://jitpack.io/v/asherepenko/android-logger.svg)](https://jitpack.io/#asherepenko/android-logger) 
 
-Base Logger implementation for Android.
+A tiny key-value Logger implementation for Android.
 
 ## How to
 
