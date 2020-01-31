@@ -1,8 +1,8 @@
 package com.sherepenko.android.logger
 
 import androidx.annotation.VisibleForTesting
-import androidx.work.Operation
 import com.sherepenko.android.logger.utils.DateTimeUtils
+import io.reactivex.Completable
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.util.Calendar
@@ -55,7 +55,7 @@ constructor(
     override fun extendContext(addedLogContext: LogContext): Logger =
         BaseLogger(logWriter, logContext.extend(addedLogContext))
 
-    override fun forceLogUpload(): Operation =
+    override fun forceLogUpload(): Completable =
         logWriter.forceUpload()
 
     private fun LogContext.addBaseFields(message: String, logLevel: LogLevel): LogContext =

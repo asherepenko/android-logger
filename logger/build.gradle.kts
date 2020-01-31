@@ -74,6 +74,7 @@ val rxJavaVersion = "2.2.17"
 dependencies {
     api("io.reactivex.rxjava2:rxjava:$rxJavaVersion")
     implementation(kotlin("stdlib-jdk8", KotlinCompilerVersion.VERSION))
+    implementation("androidx.annotation:annotation:1.1.0")
     testImplementation("junit:junit:4.12")
     testImplementation("androidx.test:core:1.2.0")
     testImplementation("androidx.test:runner:1.2.0")
