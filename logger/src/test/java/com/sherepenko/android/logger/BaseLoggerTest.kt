@@ -7,10 +7,10 @@ import com.nhaarman.mockitokotlin2.eq
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.times
 import com.nhaarman.mockitokotlin2.verify
+import java.lang.RuntimeException
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.lang.RuntimeException
 
 @RunWith(AndroidJUnit4::class)
 class BaseLoggerTest {
