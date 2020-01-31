@@ -31,7 +31,7 @@ dependencies {
 
 - `Logger` defines base context in `key-value` format
 - `LogWriter` defines the way where to store logs
-- Can be easily used [Archivarius](https://github.com/asherepenko/android-archivarius)
+- Can be easily used with [Archivarius](https://github.com/asherepenko/android-archivarius)
 
 ## Format
 
