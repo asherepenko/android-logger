@@ -37,7 +37,7 @@ dependencies {
 
 Required fields list:
 - `message`
-- `timestamp` (RFC 3339, with fractional seconds, nanoseconds when possible)
+- `timestamp` ([RFC 3339](https://tools.ietf.org/html/rfc3339), with fractional seconds, nanoseconds when possible)
 - `log_level` (one of `debug`, `info`, `warning`, `error`)
 - `application_id`
 
