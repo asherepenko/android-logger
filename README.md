@@ -1,5 +1,6 @@
 # Logger
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![](https://jitci.com/gh/asherepenko/android-logger/svg)](https://jitci.com/gh/asherepenko/android-logger)
 [![](https://jitpack.io/v/asherepenko/android-logger.svg)](https://jitpack.io/#asherepenko/android-logger) 
 
