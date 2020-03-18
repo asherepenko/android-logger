@@ -13,7 +13,7 @@ plugins {
 }
 
 val archivesBaseName = "android-logger"
-val buildVersion = BuildVersion.parse(rootProject.file("version"))
+val buildVersion = BuildVersion(rootProject.file("version"))
 
 group = "com.github.asherepenko"
 version = buildVersion.versionName
@@ -70,13 +70,13 @@ ktlint {
     }
 }
 
-val rxJavaVersion = "2.2.17"
+val rxJavaVersion = "2.2.19"
 
 dependencies {
     api("io.reactivex.rxjava2:rxjava:$rxJavaVersion")
     implementation(kotlin("stdlib-jdk8", KotlinCompilerVersion.VERSION))
     implementation("androidx.annotation:annotation:1.1.0")
-    testImplementation("junit:junit:4.12")
+    testImplementation("junit:junit:4.13")
     testImplementation("androidx.test:core:1.2.0")
     testImplementation("androidx.test:runner:1.2.0")
     testImplementation("androidx.test.ext:junit:1.1.1")
@@ -105,6 +105,21 @@ tasks {
     val sourcesJar by registering(Jar::class) {
         archiveClassifier.set("sources")
         from(android.sourceSets.getByName("main").java.srcDirs)
+    }
+
+    val incrementMajor by registering(IncrementVersion::class) {
+        increment = Increment.MAJOR
+        version = buildVersion
+    }
+
+    val incrementMinor by registering(IncrementVersion::class) {
+        increment = Increment.MINOR
+        version = buildVersion
+    }
+
+    val incrementPatch by registering(IncrementVersion::class) {
+        increment = Increment.PATCH
+        version = buildVersion
     }
 
     artifacts {
