@@ -20,7 +20,7 @@ object DateTimeUtils {
     fun format(date: Date): String {
         val formatted = SimpleDateFormat(ISO_8601_DATE_TIME_FMT, Locale.US).format(date)
         return formatted.substring(0, TIMEZONE_SEMICOLON_INDEX) + ":" +
-                formatted.substring(TIMEZONE_SEMICOLON_INDEX)
+            formatted.substring(TIMEZONE_SEMICOLON_INDEX)
     }
 
     @JvmStatic
@@ -30,7 +30,7 @@ object DateTimeUtils {
 
         if (formatted[TIMEZONE_SEMICOLON_INDEX] == ':') {
             formatted = formatted.substring(0, TIMEZONE_SEMICOLON_INDEX) +
-                    formatted.substring(TIMEZONE_SEMICOLON_INDEX + 1)
+                formatted.substring(TIMEZONE_SEMICOLON_INDEX + 1)
         }
 
         return SimpleDateFormat(ISO_8601_DATE_TIME_FMT, Locale.US).parse(formatted)
