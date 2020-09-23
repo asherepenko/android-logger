@@ -1,4 +1,3 @@
-
 import org.jetbrains.kotlin.config.KotlinCompilerVersion
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
